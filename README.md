@@ -3,6 +3,7 @@
 A personal coach that remembers, notices patterns, and holds you accountable.
 
 <a href="https://www.youtube.com/watch?v=cY3LvkB1EQM"><img src="https://i.ibb.co/Gvsg0L9C/image.png" alt="Claude Life Assistant Demo" border="0"></a>
+
 [Watch the video](https://www.youtube.com/watch?v=cY3LvkB1EQM)
 
 ## What This Is
@@ -13,6 +14,25 @@ A 2-file system that gives Claude:
 - **Accountability** — Daily check-ins with pattern recognition
 
 **The key difference:** Claude notices what you can't see. The Memory Log tracks breakthroughs, quotes, and patterns across weeks/months.
+
+## How It Works
+
+```mermaid
+graph LR
+    A[You] -->|Conversation| B[Claude]
+    B -->|Reads| C[CLAUDE.md<br/>Who you are]
+    B -->|Reads| D[NOW.md<br/>Current state]
+    B -->|Updates| E[Memory Log<br/>Patterns over time]
+    E -.->|Part of| D
+    
+    style C fill:#e1f5ff
+    style D fill:#fff4e1
+    style E fill:#f0e1ff
+    style A fill:#e8f5e9
+    style B fill:#fff9c4
+```
+
+**The Philosophy:** Trust through transparency. All memory lives in files you control. Claude builds context over time, you see everything it remembers.
 
 ## Installation
 
