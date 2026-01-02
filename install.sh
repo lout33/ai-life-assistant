@@ -67,7 +67,30 @@ if [ "$CLAUDE_CODE" = true ] && [ "$OPENCODE" = true ]; then
         3)
             TARGET="."
             TARGET_NAME="current directory"
-            CONFIG_FILE="CLAUDE.md"
+            # Ask which tool they'll use
+            echo ""
+            echo "Which tool will you use with this project?"
+            echo "  1) Claude Code (creates CLAUDE.md)"
+            echo "  2) OpenCode (creates AGENTS.md)"
+            echo ""
+            if [ -e /dev/tty ]; then
+                read -p "Choose [1/2]: " tool_choice < /dev/tty
+            else
+                echo "Non-interactive mode. Defaulting to CLAUDE.md."
+                tool_choice=1
+            fi
+            case $tool_choice in
+                1)
+                    CONFIG_FILE="CLAUDE.md"
+                    ;;
+                2)
+                    CONFIG_FILE="AGENTS.md"
+                    ;;
+                *)
+                    echo "Invalid choice. Defaulting to CLAUDE.md."
+                    CONFIG_FILE="CLAUDE.md"
+                    ;;
+            esac
             ;;
         *)
             echo "Invalid choice. Exiting."
@@ -88,9 +111,31 @@ elif [ "$OPENCODE" = true ]; then
 else
     echo "No Claude Code or OpenCode detected."
     echo "Installing to current directory..."
+    echo ""
+    echo "Which tool will you use with this project?"
+    echo "  1) Claude Code (creates CLAUDE.md)"
+    echo "  2) OpenCode (creates AGENTS.md)"
+    echo ""
+    if [ -e /dev/tty ]; then
+        read -p "Choose [1/2]: " tool_choice < /dev/tty
+    else
+        echo "Non-interactive mode. Defaulting to CLAUDE.md."
+        tool_choice=1
+    fi
+    case $tool_choice in
+        1)
+            CONFIG_FILE="CLAUDE.md"
+            ;;
+        2)
+            CONFIG_FILE="AGENTS.md"
+            ;;
+        *)
+            echo "Invalid choice. Defaulting to CLAUDE.md."
+            CONFIG_FILE="CLAUDE.md"
+            ;;
+    esac
     TARGET="."
     TARGET_NAME="current directory"
-    CONFIG_FILE="CLAUDE.md"
 fi
 
 echo ""
@@ -148,7 +193,11 @@ if [ "$TARGET_NAME" = "Claude Code" ]; then
 elif [ "$TARGET_NAME" = "OpenCode" ]; then
     echo "Run: opencode"
 else
-    echo "Open this directory with Claude Code or OpenCode."
+    if [ "$CONFIG_FILE" = "CLAUDE.md" ]; then
+        echo "Open this directory with Claude Code."
+    else
+        echo "Open this directory with OpenCode."
+    fi
 fi
 
 echo ""
