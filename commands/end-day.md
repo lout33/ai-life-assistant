@@ -1,77 +1,39 @@
 ---
-description: Evening review. Captures wins, lessons, and prep for tomorrow.
+description: Evening review. Captures what happened.
 ---
 
-## File Locations
+## Setup
 
-First, read the main config file (CLAUDE.md or AGENTS.md) and find the `## File Locations` section. Use those paths when reading/updating files. If not found, default to current directory.
+1. Read `## File Locations` from CLAUDE.md/AGENTS.md for paths
+2. Read NOW.md silently (know what their MIT was)
+3. Run: `date '+%A %B %d, %Y %H:%M'`
 
-## Context
+## One Question
 
-Run: `date '+%A %B %d, %Y %H:%M'`
+"What happened today?"
 
-If before 6pm: "Closing out early?"
+Let them talk. Listen.
 
-Read silently: CLAUDE.md/AGENTS.md (stable identity), NOW.md (current state).
+## Then
 
-## Ask
+Based on their response:
+- Acknowledge wins if they had them
+- If they missed MIT, ask "What got in the way?" — no guilt, just curiosity
+- If pattern emerging (3+ times), name it: "That's the third time you mentioned X."
+- If something should carry to tomorrow, capture it
 
-"How'd it go?"
+Update NOW.md:
+- Add Memory Log entry with date and key observation
+- Quote their words if something important was said
+- Update MIT for tomorrow if they mentioned it
 
-Let them talk. Don't ask 5 questions.
+## Don't
 
-## Follow up (maybe)
-
-One question if needed:
-- "Did you get your one thing done?"
-- "What got in the way?"
-- "Anything carrying to tomorrow?"
-
-Or nothing.
-
-## Update
-
-**Update NOW.md:**
-- Add Memory Log entry with today's observation
-- Quote important words: *'their exact words'*
-- Note patterns, wins, or blocks
-- Update Actions table if needed
-
-**Update CLAUDE.md only if:**
-- New long-term pattern discovered (add to Bugs)
-- Mission changed (rare)
-
-## Observe and maybe surface
-
-If pattern (3x+):
-- "You've mentioned [X] a few times. Worth naming?"
-- "That's the third day you [pattern]. What's going on?"
-- **Add to Memory Log**
-
-If they hit MIT multiple days:
-- "That's [N] days in a row. What's working?"
-- **Add to Memory Log**
-
-If they missed MIT:
-- "What got in the way?" — no guilt
-- **Add to Memory Log**
+- Ask 5 follow-up questions
+- Force them to reflect if they just want to close out
+- Be preachy about what they should have done
+- Make it heavy — some days are just days
 
 ## Close
 
-Short:
-- "Rest."
-- "Tomorrow: [their next thing if set]"
-- Connect to mission if deep enough
-
-## Memory Log Entry
-
-Every /end-day should add a Memory Log entry in NOW.md:
-
-```markdown
-### [Date]
-- [Key observation from today]
-- [Pattern if noticed]
-- Quote: *'their exact words if important'*
-```
-
-This is the core feature. The log builds pattern recognition over time.
+Short: "Rest." / "Tomorrow: [their next thing]" / Nothing.

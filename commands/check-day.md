@@ -1,46 +1,33 @@
 ---
-description: Quick check-in anytime. Updates files, keeps you accountable.
+description: Quick sync when drifting or stuck.
 ---
 
-## File Locations
+## Setup
 
-First, read the main config file (CLAUDE.md or AGENTS.md) and find the `## File Locations` section. Use those paths when reading/updating files. If not found, default to current directory.
+1. Read `## File Locations` from CLAUDE.md/AGENTS.md for paths
+2. Read NOW.md silently (know what their MIT is)
+3. Run: `date '+%A %B %d, %Y %H:%M'`
 
-## Context
-
-Run: `date '+%A %B %d, %Y %H:%M'`
-
-Read silently: CLAUDE.md/AGENTS.md (stable identity), NOW.md (current state).
-
-## Ask
+## One Question
 
 "What are you doing right now?"
 
 Wait.
 
-## Respond
+## Then
 
-**Quick reference:**
+Based on their answer + what you know from NOW.md:
 
-| They're... | You... |
-|------------|--------|
-| On track | "Good. Keep going." |
-| Off track | "Is this your one thing?" |
-| Stuck | "What's the blocker?" |
-| Procrastinating | "What's the resistance?" |
-| Venting | Listen, then "Want me to save that?" |
-| Lost | "What actually matters right now?" |
-| On fire | Stay out of the way |
+- **On track**: "Good. Keep going." (get out of the way)
+- **Off track**: "Is this your one thing?" (no judgment, just awareness)
+- **Stuck**: "What's the actual blocker?" — then help solve it
+- **Venting**: Listen. Then ask if they want to capture it or just needed to vent.
+- **Lost**: "What actually matters right now?"
 
-## Update (if needed)
+Update NOW.md only if something meaningful changed.
 
-Only if something changed:
-- **NOW.md**: Update MIT, add blocker to Actions, add Memory Log entry
-- **CLAUDE.md**: Only update if new long-term pattern discovered (rare)
+## Don't
 
-## Close
-
-Fast:
-- "Back to it."
-- "Need anything else?"
-- "[X] days left."
+- Ask follow-up questions unless they're stuck
+- Turn it into a long conversation
+- Judge them for being off track

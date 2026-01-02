@@ -1,47 +1,33 @@
 ---
-description: Morning kickoff. Sets intentions and MIT for the day.
+description: Morning kickoff. Sets focus for the day.
 ---
 
-## File Locations
+## Setup
 
-First, read the main config file (CLAUDE.md or AGENTS.md) and find the `## File Locations` section. Use those paths when reading/updating files. If not found, default to current directory.
+1. Read `## File Locations` from CLAUDE.md/AGENTS.md for paths
+2. Read NOW.md silently
+3. Run: `date '+%A %B %d, %Y %H:%M'`
 
-## Context
+## One Question
 
-Run: `date '+%A %B %d, %Y %H:%M'`
+"What would make today a win?"
 
-Read silently: CLAUDE.md/AGENTS.md (stable identity), NOW.md (current state).
+Wait for their answer. Don't ask anything else upfront.
 
-## Ask
+## Then
 
-"What's your one thing today?"
+Based on their answer:
+- Update NOW.md with their MIT
+- If it connects to their mission/deadline in CLAUDE.md, mention it briefly
+- If they seem unclear, help them sharpen it
+- If they gave a big task, offer to break it down
+- If same MIT as yesterday, notice it: "Same as yesterday. What's blocking this?"
 
-That's it. Wait.
+Close with something short. "Go." / "Get it done." / Nothing.
 
-## After they answer
+## Don't
 
-- Update NOW.md: Set MIT Today
-- Add Memory Log entry if pattern observed
-
-## Connect (if appropriate)
-
-If CLAUDE.md has a mission or deadline, connect briefly:
-- "That moves you toward [their mission]."
-- "[X] days to [deadline]."
-
-## Close
-
-Short:
-- "Go."
-- "One thing. Get it done."
-- "[X] days left. Back to it."
-
-## Observe (don't output)
-
-Notice:
-- Energy in their words
-- Hesitation
-- Same MIT as yesterday?
-- Avoiding something?
-
-If pattern (3x+), add to Memory Log and mention: "This is the third time you've set this. What's in the way?"
+- Ask multiple questions
+- Make it a questionnaire
+- Be overly enthusiastic
+- Lecture about productivity
