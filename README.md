@@ -44,6 +44,8 @@ curl -fsSL https://raw.githubusercontent.com/lout33/claude_life_assistant/main/i
 
 Works with Claude Code, OpenCode, or as a local project. The script auto-detects your setup.
 
+**Windows users:** Run in WSL or Git Bash.
+
 ### Manual Installation
 
 **Option 1: Clone**

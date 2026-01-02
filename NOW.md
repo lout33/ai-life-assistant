@@ -6,6 +6,14 @@
 
 ---
 
+# QUEUE
+
+> Live tasks. Updated during sessions.
+
+- (empty)
+
+---
+
 # MODE
 
 ## Current: [MODE NAME]
@@ -39,6 +47,18 @@
 | [Specific action] | [Date] | ☐ |
 
 **MIT Today:** [Your one thing for today]
+
+## Key Numbers (Optional)
+
+| Metric | Value |
+|--------|-------|
+| [e.g., Burn rate] | [e.g., $X/month] |
+| [e.g., Runway] | [e.g., X months] |
+
+## Bucket (For Later)
+
+- [ ] [Backlog item]
+- [ ] [Backlog item]
 
 ---
 

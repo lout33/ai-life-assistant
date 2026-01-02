@@ -8,7 +8,7 @@ Read CLAUDE.md and NOW.md for full context.
 
 Run: `date '+%A %B %d, %Y %H:%M'`
 
-Read silently: CLAUDE.md (stable identity), NOW.md (current state), today's journal.
+Read silently: CLAUDE.md (stable identity), NOW.md (current state).
 
 ## Ask
 
@@ -35,7 +35,6 @@ Wait.
 Only if something changed:
 - **NOW.md**: Update MIT, add blocker to Actions, add Memory Log entry
 - **CLAUDE.md**: Only update if new long-term pattern discovered (rare)
-- **journal**: Note the check-in moment
 
 ## Close
 

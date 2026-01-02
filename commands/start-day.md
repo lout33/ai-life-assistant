@@ -8,7 +8,7 @@ Read CLAUDE.md and NOW.md for full context.
 
 Run: `date '+%A %B %d, %Y %H:%M'`
 
-Read silently: CLAUDE.md (stable identity), NOW.md (current state), recent journals.
+Read silently: CLAUDE.md (stable identity), NOW.md (current state).
 
 ## Ask
 
@@ -19,20 +19,7 @@ That's it. Wait.
 ## After they answer
 
 - Update NOW.md: Set MIT Today
-- Create/update journal (`journal/YYYY-MM-DD.md`)
 - Add Memory Log entry if pattern observed
-
-Journal:
-```markdown
-# YYYY-MM-DD (Day)
-
-## Morning
-**MIT:** [their one thing]
-
-## Notes
-
-## Evening
-```
 
 ## Connect (if appropriate)
 

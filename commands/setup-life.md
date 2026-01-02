@@ -161,6 +161,14 @@ Create `NOW.md` with this structure:
 
 ---
 
+# QUEUE
+
+> Live tasks. Updated during sessions.
+
+- (empty)
+
+---
+
 # MODE
 
 ## Current: [Their default mode from conversation]
@@ -189,6 +197,16 @@ Create `NOW.md` with this structure:
 
 **MIT Today:** [Leave blank - will set next]
 
+## Key Numbers (Optional)
+
+| Metric | Value |
+|--------|-------|
+| [e.g., Burn rate] | [e.g., $X/month] |
+
+## Bucket (For Later)
+
+- [ ] [Backlog item]
+
 ---
 
 # LOG
@@ -204,10 +222,6 @@ Create `NOW.md` with this structure:
 
 *Mode at end of day: [Their current mode]*
 ```
-
-## Create journal folder
-
-Create `journal/` directory if it doesn't exist.
 
 ---
 

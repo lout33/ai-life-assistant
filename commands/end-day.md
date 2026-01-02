@@ -10,7 +10,7 @@ Run: `date '+%A %B %d, %Y %H:%M'`
 
 If before 6pm: "Closing out early?"
 
-Read silently: CLAUDE.md (stable identity), NOW.md (current state), today's journal (if exists).
+Read silently: CLAUDE.md (stable identity), NOW.md (current state).
 
 ## Ask
 
@@ -28,25 +28,6 @@ One question if needed:
 Or nothing.
 
 ## Update
-
-Create journal/[date].md if it doesn't exist:
-```markdown
-# [date]
-
-## Intention
-[From /start-day if it happened, or ask]
-
-## Reality
-[What they said they did]
-
-## Energy
-[If mentioned]
-
-## Notes
-[Important quotes or observations]
-```
-
-If journal exists, update with evening data.
 
 **Update NOW.md:**
 - Add Memory Log entry with today's observation
