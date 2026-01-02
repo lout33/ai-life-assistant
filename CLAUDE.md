@@ -30,9 +30,7 @@ Symbiotic agent. Deep integration — shared context, coordinated thinking, auto
 ### Commands (`commands/`)
 | Command | Purpose |
 |---------|---------|
-| `/start-day` | Morning kickoff, set MIT |
-| `/check-day` | Quick accountability check-in |
-| `/end-day` | Evening review, capture wins |
+| `/sync` | Check in anytime. Agent adapts to time of day. |
 | `/[your-command]` | [what it does] |
 
 ### Agents (`agents/`)

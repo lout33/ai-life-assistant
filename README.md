@@ -57,7 +57,7 @@ git clone https://github.com/lout33/claude_life_assistant
 cd claude_life_assistant
 ```
 
-Then open with Claude Code and run `/setup-life`.
+Then open with Claude Code and start talking.
 
 **Option 2: Global Install (Claude Code)**
 
@@ -78,19 +78,14 @@ cp -r commands/* ~/.config/opencode/command/
 
 ## Quick Start
 
-Run `/setup-life` to create your 2-file system. Takes 5 minutes.
+After install, just start talking. The agent learns about you through conversation.
 
-**The agent will:**
-1. Ask about your identity, mission, patterns
-2. Create `CLAUDE.md` (stable) + `NOW.md` (dynamic)
-3. Start tracking patterns from day one
+Use `/sync` to check in anytime. The agent adapts based on time of day:
+- **Morning** — "What would make today a win?"
+- **Midday** — "What are you doing right now?"
+- **Evening** — "What happened today?"
 
-Then use:
-- `/start-day` — Morning kickoff, set MIT
-- `/check-day` — Quick check-in, course correct
-- `/end-day` — Evening review, log patterns
-
-**Between commands:** The agent has full context. Just talk. It remembers everything.
+One command. The agent infers the rest from your response.
 
 ## The 2-File System
 
@@ -149,60 +144,49 @@ Example progression:
 
 The longer you use it, the better it gets.
 
-## The Commands
+## The Command
 
-### `/setup-life`
-**Run this first.** Creates both CLAUDE.md and NOW.md through a 5-minute conversation.
+### `/sync`
+Check in anytime. The agent adapts based on time of day and your response.
 
 <details>
-<summary>See example setup</summary>
+<summary>See example</summary>
 
-**You:** /setup-life
+**Morning (before 11am):**
 
-**Claude:** Let's set up your system. I'll ask a few questions.
+**You:** /sync
 
-First — what should I call you?
-
-**You:** Alex
-
-**Claude:** What are you working toward right now?
-
-**You:** I quit my job 2 months ago to build a SaaS product. Have about 4 months of runway left.
-
-**Claude:** What usually gets in your way?
-
-**You:** I keep adding features instead of launching. And I avoid talking to users because it's awkward.
-
-**Claude:** When you're off track, how should I call you out?
-
-**You:** Be direct. I need someone to cut through my BS.
-
-**Claude:** What modes do you operate in? Like BUILDER (shipping code), STRATEGIST (planning), HUMAN (rest).
-
-**You:** BUILDER when I'm shipping, BROWSER when I'm procrastinating on Reddit, HUMAN when recovering.
-
-**Claude:** What are your 2-3 active missions right now?
-
-**You:** Launch MVP by Feb 15. Get 10 paying users by Mar 31.
-
-**Claude:** Got it. Files created. What's your one thing for today?
+**Claude:** What would make today a win?
 
 **You:** Ship the signup flow.
 
-**Claude:** Good. Ship the signup flow. 120 days to Mar 31.
+**Claude:** Got it. Ship the signup flow. 120 days to Mar 31. Go.
 
-Go.
+---
+
+**Midday (11am-6pm):**
+
+**You:** /sync
+
+**Claude:** What are you doing right now?
+
+**You:** I got distracted refactoring the auth module...
+
+**Claude:** Is that your one thing? You said signup flow this morning.
+
+---
+
+**Evening (after 6pm):**
+
+**You:** /sync
+
+**Claude:** What happened today?
+
+**You:** Got the signup flow done. Also realized I've been avoiding the pricing page for a week.
+
+**Claude:** Good. Signup shipped. That's the third time you've mentioned avoiding pricing. What's the resistance?
 
 </details>
-
-### `/start-day`
-Morning ritual. Sets your MIT (Most Important Thing) for the day.
-
-### `/check-day`
-Quick check-in. Claude mirrors what you're doing vs what you said you'd do.
-
-### `/end-day`
-Evening review. Updates Memory Log with what happened and patterns observed.
 
 ## Examples
 
@@ -212,7 +196,7 @@ Check `examples/` for real progressions:
 - **rick-developer** — Backend dev job hunting after layoff
 - **sam-student** — Career changer learning to code part-time
 
-Each shows Week 1 → Month 3 evolution with Memory Log progression.
+Each shows Week 1 to Month 3 evolution with Memory Log progression.
 
 ## Who This Is For
 
@@ -245,7 +229,6 @@ This template covers the basics. My personal setup includes:
 - **Skills ecosystem** — Search, research, image generation, and more
 - **Agent delegation** — Spawn sub-agents for complex tasks
 - **Integrated journal** — Daily entries with AI pattern recognition
-- **Custom commands** — Rituals for `/start-day`, `/check-day`, `/end-day`
 
 Interested in the full system? **Let me know** (feedback helps prioritize what to build next).
 
