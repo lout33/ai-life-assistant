@@ -87,7 +87,7 @@ Then use:
 |------|---------|---------|
 | `CLAUDE.md` | Rarely (weeks/months) | Who you are, how you work, your mission |
 | `NOW.md` | Daily/weekly | Current mode, this week's actions, Memory Log |
-| `journal/` | Daily | What happened each day (auto-created) |
+| `archive/` | Weekly/monthly | Historical snapshots (optional) |
 
 **Why 2 files?**
 
@@ -100,7 +100,7 @@ You talk to Claude. Claude maintains the files. No manual file editing required.
 ## How It Works (Data Flow)
 
 **Local:**
-- All your files (`CLAUDE.md`, `NOW.md`, journal) are stored on your machine
+- All your files (`CLAUDE.md`, `NOW.md`, `archive/`) are stored on your machine
 - You own and control all data
 - Safe to version control (but consider `.gitignore` for personal files)
 
