@@ -22,9 +22,7 @@ mkdir -p "$TMP_DIR/commands"
 # Download files
 curl -fsSL "$REPO_URL/CLAUDE.md" -o "$TMP_DIR/CLAUDE.md"
 curl -fsSL "$REPO_URL/NOW.md" -o "$TMP_DIR/NOW.md"
-curl -fsSL "$REPO_URL/commands/start-day.md" -o "$TMP_DIR/commands/start-day.md"
-curl -fsSL "$REPO_URL/commands/check-day.md" -o "$TMP_DIR/commands/check-day.md"
-curl -fsSL "$REPO_URL/commands/end-day.md" -o "$TMP_DIR/commands/end-day.md"
+curl -fsSL "$REPO_URL/commands/sync.md" -o "$TMP_DIR/commands/sync.md"
 
 # Detect installed tools
 CLAUDE_CODE=false
@@ -169,7 +167,7 @@ else
 fi
 
 # Copy commands
-for cmd in start-day check-day end-day; do
+for cmd in sync; do
     TARGET_CMD="$COMMANDS_DIR/$cmd.md"
     if [ -f "$TARGET_CMD" ]; then
         echo -e "${YELLOW}! Skipping $cmd, already exists${NC}"
@@ -192,9 +190,7 @@ echo ""
 echo "Your system is ready."
 echo ""
 echo "How it works:"
-echo "  /start-day  — Morning. Set your focus."
-echo "  /check-day  — When drifting. Quick sync."
-echo "  /end-day    — Evening. Capture what happened."
+echo "  /sync  — Check in anytime. Agent adapts to time of day."
 echo ""
 echo "The agent learns about you through conversation."
 echo "No setup required — just start talking."
