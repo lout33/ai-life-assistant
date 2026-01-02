@@ -169,8 +169,8 @@ else
     echo -e "${GREEN}✓ Copied NOW.md${NC}"
 fi
 
-# Copy commands
-for cmd in setup-life start-day check-day end-day; do
+# Copy commands (skip setup-life, it's optional now)
+for cmd in start-day check-day end-day; do
     TARGET_CMD="$COMMANDS_DIR/$cmd.md"
     if [ -f "$TARGET_CMD" ]; then
         echo -e "${YELLOW}! Skipping $cmd, already exists${NC}"
@@ -180,22 +180,63 @@ for cmd in setup-life start-day check-day end-day; do
     fi
 done
 
-# Cleanup
+# Cleanup temp files
 rm -rf "$TMP_DIR"
 
 echo ""
-echo "Done!"
+echo -e "${GREEN}Done!${NC}"
 echo ""
-if [ "$TARGET_NAME" = "Claude Code" ]; then
-    echo "Next steps:"
-    echo "  1. Run: claude"
-    echo "  2. Inside Claude Code, run: /setup-life"
-elif [ "$TARGET_NAME" = "OpenCode" ]; then
-    echo "Next steps:"
-    echo "  1. Run: opencode"
-    echo "  2. Inside OpenCode, run: /setup-life"
-else
-    echo "Next steps:"
-    echo "  1. Open this directory with Claude Code or OpenCode"
-    echo "  2. Run: /setup-life"
+
+# Ask optional MIT question
+echo "What's your one thing for today? (press Enter to skip)"
+echo ""
+
+MIT=""
+if [ -e /dev/tty ]; then
+    read -p "> " MIT < /dev/tty
 fi
+
+if [ -n "$MIT" ]; then
+    # Update NOW.md with MIT
+    if [ -f "$TARGET_NOW" ]; then
+        # Replace "- (empty)" with the actual task
+        if grep -q "^- (empty)$" "$TARGET_NOW" 2>/dev/null; then
+            sed -i.bak "s/^- (empty)$/- [ ] $MIT/" "$TARGET_NOW" && rm -f "$TARGET_NOW.bak"
+        else
+            # Append to QUEUE section
+            sed -i.bak "/^# QUEUE$/,/^---$/ { /^- /a\\
+- [ ] $MIT
+}" "$TARGET_NOW" && rm -f "$TARGET_NOW.bak"
+        fi
+        echo ""
+        echo -e "${GREEN}✓ MIT set: $MIT${NC}"
+    fi
+fi
+
+echo ""
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo ""
+echo "Your system is ready."
+echo ""
+echo "How it works:"
+echo "  /start-day  — Morning. Set your focus."
+echo "  /check-day  — When drifting. Quick sync."
+echo "  /end-day    — Evening. Capture what happened."
+echo ""
+echo "The agent learns about you through conversation."
+echo "No setup required — just start talking."
+echo ""
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo ""
+
+if [ "$TARGET_NAME" = "Claude Code" ]; then
+    echo "Run: claude"
+elif [ "$TARGET_NAME" = "OpenCode" ]; then
+    echo "Run: opencode"
+else
+    echo "Open this directory with Claude Code or OpenCode."
+fi
+
+echo ""
+echo "Go ship."
+echo ""
