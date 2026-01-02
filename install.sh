@@ -187,32 +187,6 @@ echo ""
 echo -e "${GREEN}Done!${NC}"
 echo ""
 
-# Ask optional MIT question
-echo "What's your one thing for today? (press Enter to skip)"
-echo ""
-
-MIT=""
-if [ -e /dev/tty ]; then
-    read -p "> " MIT < /dev/tty
-fi
-
-if [ -n "$MIT" ]; then
-    # Update NOW.md with MIT
-    if [ -f "$TARGET_NOW" ]; then
-        # Replace "- (empty)" with the actual task
-        if grep -q "^- (empty)$" "$TARGET_NOW" 2>/dev/null; then
-            sed -i.bak "s/^- (empty)$/- [ ] $MIT/" "$TARGET_NOW" && rm -f "$TARGET_NOW.bak"
-        else
-            # Append to QUEUE section
-            sed -i.bak "/^# QUEUE$/,/^---$/ { /^- /a\\
-- [ ] $MIT
-}" "$TARGET_NOW" && rm -f "$TARGET_NOW.bak"
-        fi
-        echo ""
-        echo -e "${GREEN}✓ MIT set: $MIT${NC}"
-    fi
-fi
-
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
