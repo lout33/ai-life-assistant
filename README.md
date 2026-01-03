@@ -2,10 +2,10 @@
 
 A symbiotic AI agent that remembers everything, challenges you, and extends your cognition.
 
-<a href="https://www.youtube.com/watch?v=cY3LvkB1EQM"><img src="https://i.ibb.co/b5kfcpB2/whiteboard-diagram.jpg" alt="Claude Life Assistant Demo" border="0"></a>
+<a href="https://www.youtube.com/watch?v=oBURNsNVU3Y"><img src="https://i.ibb.co/b5kfcpB2/whiteboard-diagram.jpg" alt="Claude Life Assistant Demo" border="0"></a>
 
 
-[Watch the video](https://www.youtube.com/watch?v=cY3LvkB1EQM)
+[Watch the video](https://www.youtube.com/watch?v=oBURNsNVU3Y)
 
 ## What This Is
 
