@@ -8,7 +8,7 @@
 
 # QUEUE
 
-> Live tasks. Updated during sessions.
+> Live tasks. Updated during sessions. Use `[blocked by:task]` for dependencies.
 
 - (empty)
 
