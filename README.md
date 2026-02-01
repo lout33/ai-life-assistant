@@ -81,6 +81,19 @@ After install, just start talking. That's it.
 
 The agent reads your files at session start. It knows your identity, your current projects, your patterns. No commands needed — it adapts to whatever you're doing.
 
+## Commands
+
+Built-in commands for daily rituals:
+
+| Command | What it does |
+|---------|--------------|
+| `/start-day` | Morning kickoff. Sets your MIT (Most Important Task) for the day. |
+| `/check-day` | Quick check-in anytime. Accountability without friction. |
+| `/end-day` | Evening review. Captures wins, lessons, updates the log. |
+| `/reflect` | Deep reflection. Creates journal entries, surfaces patterns. |
+
+Just type the command. The agent handles the rest.
+
 ## The 2-File System
 
 | File | Purpose |

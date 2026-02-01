@@ -23,6 +23,13 @@ mkdir -p "$TMP_DIR"
 curl -fsSL "$REPO_URL/CLAUDE.md" -o "$TMP_DIR/CLAUDE.md"
 curl -fsSL "$REPO_URL/NOW.md" -o "$TMP_DIR/NOW.md"
 
+# Download commands
+mkdir -p "$TMP_DIR/commands"
+curl -fsSL "$REPO_URL/commands/start-day.md" -o "$TMP_DIR/commands/start-day.md"
+curl -fsSL "$REPO_URL/commands/check-day.md" -o "$TMP_DIR/commands/check-day.md"
+curl -fsSL "$REPO_URL/commands/end-day.md" -o "$TMP_DIR/commands/end-day.md"
+curl -fsSL "$REPO_URL/commands/reflect.md" -o "$TMP_DIR/commands/reflect.md"
+
 # Detect installed tools
 CLAUDE_CODE=false
 OPENCODE=false
@@ -177,6 +184,18 @@ fi
 cp "$TMP_DIR/NOW.md" "$TARGET_NOW"
 echo -e "${GREEN}✓ Copied NOW.md${NC}"
 
+# Copy commands to appropriate location
+# Claude Code uses "commands" (plural), OpenCode uses "command" (singular)
+if [ "$IS_OPENCODE" = true ]; then
+    COMMANDS_DIR="$TARGET/command"
+else
+    COMMANDS_DIR="$TARGET/commands"
+fi
+
+mkdir -p "$COMMANDS_DIR"
+cp "$TMP_DIR/commands/"*.md "$COMMANDS_DIR/"
+echo -e "${GREEN}✓ Copied commands (start-day, check-day, end-day, reflect)${NC}"
+
 # Cleanup temp files
 rm -rf "$TMP_DIR"
 
@@ -193,7 +212,13 @@ echo "Two files power the system:"
 echo "  $CONFIG_FILE  — Your identity, psychology, patterns"
 echo "  NOW.md        — Current state, projects, memory log"
 echo ""
-echo "The agent reads both at session start."
+echo "Commands available:"
+echo "  /start-day    — Morning kickoff, set MIT"
+echo "  /check-day    — Quick accountability check-in"
+echo "  /end-day      — Evening review, capture wins"
+echo "  /reflect      — Deep reflection, creates journal entry"
+echo ""
+echo "The agent reads both files at session start."
 echo "Just start talking. It already knows you."
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
