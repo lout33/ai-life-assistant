@@ -229,6 +229,7 @@ Part of the symbiotic AI ecosystem:
 
 | Project | What it does |
 |---------|--------------|
+| [what-did-i-do](https://github.com/lout33/what-did-i-do) | Know what you actually did today. Passive screen tracker that captures screenshots, analyzes with Gemini Vision, and creates daily activity reports. |
 | [writing-style-skill](https://github.com/lout33/writing-style-skill) | Make AI write like you. Export your emails/chats, extract your patterns, transform any AI text into your voice. |
 
 More skills coming. Star to follow.
