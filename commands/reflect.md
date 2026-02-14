@@ -38,13 +38,28 @@ Don't rush. Don't fix. Don't give advice too early. Let them find it themselves.
 
 When something true emerges, ask: "Want me to save that?"
 
-Create `journal/YYYY-MM-DD.md` with their raw words. Freeform. Use their voice, not yours.
+Create `journal/YYYY-MM-DD.md`. Format:
 
-## Update AGENTS.md (if pattern emerges)
+- **User's exact words** go in blockquotes: `> "their words here"`
+- **Your observations/reflections** are plain text (no quotes)
+- Keep their voice raw. Don't polish or rephrase what they said.
+
+Example:
+```
+> "I keep saying I want X but I never actually do it."
+
+> "I think I'm afraid of what happens if I succeed."
+
+The fear isn't failure. It's what changes if it works.
+
+> "Maybe I'm not ready to let go of the excuse."
+```
+
+## Update USER.md (if pattern emerges)
 
 Only if a lasting pattern is discovered, ask: "This seems important. Want me to add it to your profile?"
 
-**AGENTS.md > ME > Psychology** sections:
+**USER.md > Psychology** sections:
 - **Drivers** - Fears, desires, motivations
 - **Bugs** - Patterns that trip you up
 - **What works** - Things that energize
