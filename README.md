@@ -51,6 +51,16 @@ cd symbiotic-ai
 3. **Month 2+:** Optional files appear as needed. Milestones accumulate naturally.
 4. **Ongoing:** SOUL.md and USER.md get refined as you learn more about yourself and what agent personality works.
 
+## Examples
+
+Not sure what filled-in files look like? The [`examples/`](examples/) folder has 3 complete setups showing what the system looks like after weeks of real use:
+
+- **[jamie/](examples/jamie/)** -- 22yo CS student juggling classes, internship apps, and a side project
+- **[sam/](examples/sam/)** -- 30yo mid-level dev focused on career growth and interview prep
+- **[morgan/](examples/morgan/)** -- 35yo marketing manager integrating AI into their workflow
+
+Each has all 4 files filled in with realistic data. Start from the root templates and make them yours.
+
 ## The Memory Log
 
 In NOW.md, the agent maintains a dated log of patterns, quotes, and insights:
